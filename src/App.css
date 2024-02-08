@@ -1,9 +1,101 @@
-.App {
-  text-align: center;
+header {
+  width: 80%;
+  height: 60px;
+  border: 1px solid gray;
+  margin: auto;
+  border-radius: 10px;
+  background: linear-gradient(rgba(128, 128, 128, 0.582), white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.filter {
+  width: 35%;
+  height: 70%;
+  border: 1px solid gray;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.626);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.filter input {
+  width: 79%;
+  height: 85%;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.iconsearch {
+  color: gray;
+}
+
+.iconsearch:hover {
+  cursor: pointer;
+}
+
+.first {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.second {
+  width: 43%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.song {
+  width: 80%;
+  height: 60px;
+  background-color: rgba(128, 128, 128, 0.21);
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+}
+
+.song div {
+  height: 100%;
+}
+
+.box1 {
+  width: 6%;
+  border-right: 2px solid white;
+}
+
+.box2 {
+  width: 35%;
+  border-right: 2px solid white;
+  padding-left: 15px;
+  padding-top: 17px;
+  color: gray;
+  font-weight: 800;
+}
+.box3{
+  width: 8%;
+  border-right: 2px solid white;
+  padding-left: 15px;
+  padding-top: 17px;
+  color: gray;
+  font-weight: 800;
+}
+@media screen and (max-width:768px){
+  .box2 {
+    font-size: 12px;
+  }
+  .box3 {
+    font-size: 12px;
+  }
+  .filter input {
+    width: 69%;
   }
 }
+

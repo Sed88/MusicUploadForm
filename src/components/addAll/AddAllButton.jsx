@@ -5,8 +5,8 @@ const AddAllButton = () => {
     return (
         <>
             <div className="add">
-                <button className="addbtn"> <FontAwesomeIcon icon={faPlus} />Add All</button>
-                <button className="btnchevron"><div className="triangle"></div></button>
+                <button className="addbtn"> <FontAwesomeIcon icon={faPlus} className="iconplus" />Add All</button>
+                <button className="btnchevron"><div className="triangleadd"></div></button>
             </div>
         </>
     )

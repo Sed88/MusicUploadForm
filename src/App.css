@@ -79,7 +79,8 @@ header {
   color: gray;
   font-weight: 800;
 }
-.box3{
+
+.box3 {
   width: 8%;
   border-right: 2px solid white;
   padding-left: 15px;
@@ -87,15 +88,77 @@ header {
   color: gray;
   font-weight: 800;
 }
-@media screen and (max-width:768px){
+
+@media screen and (max-width:768px) {
   .box2 {
     font-size: 12px;
   }
+
   .box3 {
     font-size: 12px;
   }
+
   .filter input {
     width: 69%;
   }
 }
 
+@media screen and (max-width:480px) {
+  .box2 {
+    font-size: 8px;
+  }
+
+  .box3 {
+    font-size: 8px;
+  }
+
+  .song {
+    height: 40px;
+  }
+
+  header {
+    height: 40px;
+  }
+
+  .first div {
+    height: 100%;
+  }
+
+  .filter input {
+    width: 62%;
+  }
+
+  .iconsearch {
+    font-size: 10px;
+  }
+
+  .filter input::placeholder {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .song {
+    height: 30px;
+  }
+
+  header {
+    height: 30px;
+  }
+
+  .box2 {
+    font-size: 6px;
+    padding-top: 10px;
+  }
+
+  .box3 {
+    font-size: 6px;
+    padding-top: 10px;
+    padding-left: 5px;
+  }
+
+  .filter input::placeholder {
+    font-size: 8px;
+  }
+
+}

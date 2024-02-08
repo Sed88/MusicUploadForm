@@ -33,7 +33,7 @@
     cursor: pointer;
 }
 
-.triangle {
+.triangletrack {
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
@@ -50,5 +50,17 @@
 @media screen and (max-width:768px) {
     .trackbtn {
         font-size: 7px;
+    }
+
+    .triangletrack {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 6px solid #555;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .track {
+        height: 100%;
     }
 }

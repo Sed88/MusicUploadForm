@@ -22,11 +22,11 @@ function App() {
         </div>
       </header>
       <div className='song'>
-          <div className='box1'></div>
-          <div  className='box2'>Song Name</div>
-          <div  className='box2'>Artist Name</div>
-          <div  className='box3'>Track</div>
-          <div  className='box4'></div>
+        <div className='box1'></div>
+        <div className='box2'>Song Name</div>
+        <div className='box2'>Artist Name</div>
+        <div className='box3'>Track</div>
+        <div className='box4'></div>
       </div>
     </div>
   );

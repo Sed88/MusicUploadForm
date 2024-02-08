@@ -33,7 +33,7 @@
     align-items: center;
 }
 
-.triangle {
+.triangleadd {
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
@@ -50,5 +50,29 @@
 @media screen and (max-width:768px) {
     .addbtn {
         font-size: 8px;
+    }
+
+    .triangleadd {
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 6px solid #555;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .iconplus {
+        display: none;
+    }
+
+    .triangleadd {
+        position: absolute;
+        top: 20px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .triangleadd {
+        position: absolute;
+        top: 14px;
     }
 }

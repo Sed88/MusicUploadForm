@@ -5,8 +5,8 @@ const PlayAllButton = () => {
     return (
         <>
             <div className="play">
-                <button className="playbtn"> <FontAwesomeIcon icon={faPlay} />Play All</button>
-                <button className="btnchevron"><div className="triangle"></div></button>
+                <button className="playbtn"> <FontAwesomeIcon icon={faPlay} className="iconplay" />Play All</button>
+                <button className="btnchevron"><div className="triangleplay"></div></button>
             </div>
         </>
     )

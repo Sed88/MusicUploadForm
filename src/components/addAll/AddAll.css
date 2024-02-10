@@ -41,6 +41,9 @@
     border-top: 10px solid #555;
 }
 
+  
+
+
 @media screen and (max-width:1024px) {
     .addbtn {
         font-size: 12px;

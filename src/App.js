@@ -4,6 +4,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import PlayAllButton from './components/playAll/PlayAllButton';
 import TrackNumber from './components/track/TrackNumber';
 import AddAllButton from './components/addAll/AddAllButton';
+import SongList from './components/songList/SongList';
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
         <div className='box3'>Track</div>
         <div className='box4'></div>
       </div>
+      <SongList/>
+      
     </div>
   );
 }

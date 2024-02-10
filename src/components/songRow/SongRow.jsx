@@ -3,7 +3,7 @@ import "./SongRow.css"
 import { faCaretDown, faCheck, faHeart, faList, faPlay, faShare } from "@fortawesome/free-solid-svg-icons"
 
 
-const SongRow = ({ song }) => {
+const SongRow = ({ song }) => {  // song is object which comes from misucArray
     return (
         <>
             <div className="music">

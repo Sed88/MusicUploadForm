@@ -5,16 +5,17 @@ import { useState } from "react";
 import MusicUploadModal from "../musicUpload/MusicUploadForm";
 const AddAllButton = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const handleCloseModal = () => {
+  const handleCloseModal = () => { ////to close the modal
     setModalOpen(false)
   };
-  const handleOpenModal = () => {
+  const handleOpenModal = () => {  //to open the modal
     setModalOpen(true);
   };
   return (
     <>
       <div className="add" onClick={handleOpenModal}>
         <button className="addbtn"> <FontAwesomeIcon icon={faPlus} className="iconplus" />Add All</button>
+        {/* import ModalWindowComponent */}
         <MusicUploadModal handleCloseModal={handleCloseModal} modalOpen={modalOpen} />
         <button className="btnchevron"><div className="triangleadd"></div></button>
       </div>

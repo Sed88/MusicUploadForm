@@ -1,25 +1,27 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const getMusic = createAsyncThunk("getMusic", async (_, thunkApi) => {
+export const getMusic = createAsyncThunk("getMusic", async (_, thunkApi) => {  //function to query the backend 
     try {
-        //  const response = axios.get('')
+        //  const response = axios.get('your API') 
         //  return response.data   
         return [
             {
                 id: Math.random(),
                 songName: "halo",
                 artistName: "Beyonce",
-                trackNumber: 1
+                trackNumber: 1,
+                file: "ADAM_ZHUREK.mp3"
             },
             {
                 id: Math.random(),
                 songName: "love",
                 artistName: "Omer Balik",
-                trackNumber: 2
+                trackNumber: 2,
+                file: "ADAM_ZHUREK.mp3"
             }
         ]
     } catch {
-        return thunkApi.rejectWithValue()
+        return thunkApi.rejectWithValue() //object for errors
     }
 })
 
@@ -27,15 +29,23 @@ export const getMusic = createAsyncThunk("getMusic", async (_, thunkApi) => {
 const initialState = {
     musicArray: [],
     loading: false,
+    searchProducts:[],
+    searchInput:"",
     error: ""
 }
 export const MusicUploadSlice = createSlice({
     name: "music",
     initialState: initialState,
     reducers: {
-        addMusic: (state, action) => {
-            state.musicArray = [...state.musicArray, { id: Math.random(), songName: action.payload.songName, artistNameName: action.payload.artistNameName, trackNumber: action.payload.trackNumber }]
-        }
+        addMusic: (state, action) => {  /// action for adding uplaod file to the musicArray
+            state.musicArray = [...state.musicArray, { id: Math.random(), songName: action.payload.songName, artistNameName: action.payload.artistName, trackNumber: action.payload.trackNumber, file: action.payload.file }]
+        }, 
+        search: (state, action) => {
+            const filteredProducts = state.musicArray.filter(product => product.songName.toLowerCase().includes(action.payload.toLowerCase()))
+            state.searchProducts = filteredProducts
+            state.searchInput = action.payload
+
+        },
     },
     extraReducers: (builder) => {
         builder
@@ -53,5 +63,5 @@ export const MusicUploadSlice = createSlice({
     }
 })
 
-export const { addMusic } = MusicUploadSlice.actions
+export const { addMusic ,search} = MusicUploadSlice.actions
 export default MusicUploadSlice.reducer

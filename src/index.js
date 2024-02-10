@@ -8,7 +8,8 @@ import { Store } from './app/Store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Provider store={Store}>
+    // All your slices are in Store
+    <Provider store={Store}> 
         <App />
     </Provider>
 );

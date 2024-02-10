@@ -64,3 +64,17 @@
         height: 100%;
     }
 }
+
+@media screen and (max-width:320px) {
+    .trackbtn {
+        font-size: 4px;
+    }
+
+    .triangletrack {
+        position: absolute;
+        top: 13px;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-top: 4px solid #555;
+    }
+}

@@ -7,15 +7,14 @@ const MusicUploadModal = ({ modalOpen, handleCloseModal }) => {
     const [artist, setArtist] = useState("")
     const [selectedFile, setSelectedFile] = useState(null);
     const dispatch = useDispatch()
-    const musicArray = useSelector(state => state.music.musicArray)
-
+    const musicArray = useSelector(state => state.music.musicArray) // this is array where is files
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         setSelectedFile(file);
-    };
+    }; //for music upload
     const handleUpload = () => {
         if (artist !== "") {
-            dispatch(addMusic({ id: Math.random(), songName: selectedFile.name, artistName: artist, trackNumber: musicArray.length + 1 }))
+            dispatch(addMusic({ id: Math.random(), songName: selectedFile.name, artistName: artist, trackNumber: musicArray.length + 1, file: selectedFile.name }))
             console.log("Uploading file:", selectedFile);
         } else {
             alert("Please enter artistName")

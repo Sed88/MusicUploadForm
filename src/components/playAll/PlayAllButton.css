@@ -79,5 +79,13 @@
     .triangleplay {
         position: absolute;
         top: 14px;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-top: 3px solid #555;
     }
+
+    .playbtn {
+        font-size: 4px;
+    }
+
 }

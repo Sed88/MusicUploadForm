@@ -41,7 +41,7 @@
     border-top: 10px solid #555;
 }
 
-  
+
 
 
 @media screen and (max-width:1024px) {
@@ -77,5 +77,12 @@
     .triangleadd {
         position: absolute;
         top: 14px;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-top: 3px solid #555;
+    }
+
+    .addbtn {
+        font-size: 4px;
     }
 }

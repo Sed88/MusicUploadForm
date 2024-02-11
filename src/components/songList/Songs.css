@@ -1,0 +1,83 @@
+table {
+    border-collapse: collapse;
+    padding: 0;;
+    table-layout: fixed;
+    width: 80%;
+    margin: 40px auto 0;
+    color: gray;
+}
+
+table thead {
+    background-color: rgba(128, 128, 128, 0.21);
+}
+
+table thead th {
+    border-right: 2px solid white;
+    font-weight: 800;
+}
+
+table tbody tr {
+    border-bottom: 1px solid gray;
+}
+
+table tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+table tr {
+    padding: .35em;
+    height: 60px;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table svg {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table thead {
+        border: none;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+        height: unset;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+}

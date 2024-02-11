@@ -69,3 +69,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 "# MusicUploadForm" 
+
+### Overview of Component Structure
+
+This project is structured following a modular and component-based architecture. The main components include:
+
+1.  **src/components:** Contains reusable and self-contained UI components.
+2.  **src/app** there is Store.jsx for global state
+3.  **Store.jsx:** Redux store setup.
+4.  **src/features**
+     **MusicUploadSlice.jsx:** Redux Toolkit slice.
+
+## State Management Approach
+
+The application utilizes Redux Toolkit for state management. The key components related to state management are:
+
+- **Redux Store Setup:**
+  - The Redux store is configured in `src/app/Store.jsx`.
+
+- **Redux Toolkit Slice:**
+  - The `src/features/MusicUploadSlice.jsx` file contains the Redux Toolkit slice . It includes initial state, reducers, actions and extraReducers.
+
+## Instructions to Run Locally
+
+To run the application locally, follow these steps:
+
+1. **Clone the repository:**
+
+   git clone https://github.com/Sed88/MusicUploadForm

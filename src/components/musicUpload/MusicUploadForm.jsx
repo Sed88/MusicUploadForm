@@ -2,15 +2,19 @@ import React, { useState } from 'react';
 import "./MusicUploadForm.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { addMusic } from '../../features/MusicUploadSlice';
+import { Howl } from 'howler';
 
-const MusicUploadModal = ({ modalOpen, handleCloseModal }) => {
+
+
+const MusicUploadModal = ({ handleCloseModal, modalOpen }) => {
     const [artist, setArtist] = useState("")
     const [selectedFile, setSelectedFile] = useState(null);
+    const [isPlaying, setIsPlaying] = useState(false);
     const dispatch = useDispatch()
     const musicArray = useSelector(state => state.music.musicArray) // this is array where is files
     const handleFileChange = (event) => {
-        const file = event.target.files[0];
-        setSelectedFile(file);
+            const file = event.target.files[0];
+            setSelectedFile(file);
     }; //for music upload
     const handleUpload = () => {
         if (artist !== "") {
@@ -20,7 +24,25 @@ const MusicUploadModal = ({ modalOpen, handleCloseModal }) => {
             alert("Please enter artistName")
         }
 
+    }
+
+    const handlePlayPause = () => {
+        if (selectedFile) {
+            const sound = new Howl({
+                src: [URL.createObjectURL(selectedFile.file)],
+                html5: true,
+            });
+
+            if (isPlaying) {
+                sound.pause();
+            } else {
+                sound.play();
+            }
+
+            setIsPlaying(!isPlaying);
+        }
     };
+
     return (
         <>
             {modalOpen && (
@@ -47,7 +69,9 @@ const MusicUploadModal = ({ modalOpen, handleCloseModal }) => {
                         </button>
                     </div>
                 </div>
+
             )}
+
         </>
     );
 };

@@ -11,6 +11,7 @@ const AddAllButton = () => {
   const handleOpenModal = () => {  //to open the modal
     setModalOpen(true);
   };
+ 
   return (
     <>
       <div className="add" onClick={handleOpenModal}>

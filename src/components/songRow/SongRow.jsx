@@ -3,14 +3,14 @@ import "./SongRow.css"
 import { faCaretDown, faCheck, faHeart, faList, faPlay, faShare } from "@fortawesome/free-solid-svg-icons"
 
 
-const SongRow = ({ song }) => {  // song is object which comes from misucArray
+const SongRow = ({ song  }) => {  // song is object which comes from misucArray
     return (
         <>
             <div className="music">
                 <div className="drag">
                     <div className="dragicons">
                         <FontAwesomeIcon icon={faList} />
-                        <FontAwesomeIcon icon={faPlay} />
+                        <FontAwesomeIcon icon={faPlay}  />
                     </div>
                     <div className="dragname">
                         <p>{song.songName.replace('.mp3', '')}</p>
